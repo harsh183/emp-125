@@ -72,6 +72,8 @@
 <li data-marpit-fragment="1">Attaching the <code>static</code> keyword to attach the method to the class, rather than the instance</li>
 <li data-marpit-fragment="2"><code>static</code> class methods cannot access instance variables</li>
 </ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="uncover" style="--theme:uncover;">
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Building</span> </span>{
   <span class="hljs-keyword">private</span> String name;
   <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;
@@ -88,26 +90,23 @@ Building student = <span class="hljs-keyword">new</span> Building(<span class="h
 System.out.println(student.getName());
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
 <h1>Final</h1>
 <ul>
 <li data-marpit-fragment="1">keyword disallows a variable from being modified</li>
 <li data-marpit-fragment="2">Perfect for constants</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
 <h1>1) Inheritance</h1>
 <ul>
 <li data-marpit-fragment="1">Inheritance can be useful when we have objects that share functionality</li>
 <li data-marpit-fragment="2"><code>class SubClass extends BaseClass</code></li>
-<li data-marpit-fragment="3">class Chuchu extends Pet</li>
+<li data-marpit-fragment="3"><code>class Chuchu extends Pet</code></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="1" data-theme="uncover" style="--theme:uncover;">
-<h1>Inheritance Example</h1>
-<ul>
-<li data-marpit-fragment="1">what do you think happens here?</li>
-</ul>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="uncover" style="--theme:uncover;">
+<p>What do you think happens here?</p>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">()</span></span>{
         System.out.println(<span class="hljs-string">&quot;New animal created!&quot;</span>);
@@ -125,11 +124,8 @@ System.out.println(student.getName());
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="1" data-theme="uncover" style="--theme:uncover;">
-<h1>Inheritance Example</h1>
-<ul>
-<li data-marpit-fragment="1">What gets printed here?</li>
-</ul>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="uncover" style="--theme:uncover;">
+<p>What gets printed here?</p>
 <pre><code class="language-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">final</span> <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>{
        System.out.println(<span class="hljs-string">&quot;Base::show() called&quot;</span>);
@@ -150,19 +146,26 @@ System.out.println(student.getName());
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
 <h1>Private/Protected</h1>
 <ul>
 <li data-marpit-fragment="1"><code>Private</code> variables in the parent class can't be accessed by child classes</li>
 <li data-marpit-fragment="2">Child classes can acess <code>protected</code> variables in the parent class</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="1" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
 <h1>Super</h1>
 <ul>
-<li data-marpit-fragment="1">the <code>super</code> keyword is used in the child constructor to call the parent constructor</li>
+<li data-marpit-fragment="1">
+<p>the <code>super</code> keyword is used in the child constructor to call the parent constructor</p>
+</li>
+<li data-marpit-fragment="2">
+<p>it has to be called at the start of the constructor.</p>
+</li>
 </ul>
-<pre><code class="language-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="uncover" style="--theme:uncover;">
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
     <span class="hljs-keyword">protected</span> String name;
     <span class="hljs-keyword">protected</span> String sound;
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String n, String s)</span></span>{
@@ -177,39 +180,36 @@ System.out.println(student.getName());
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="uncover" style="--theme:uncover;"></section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
-<h1>Exersize #1 (10 miniutes)</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h1>Exercise #1 (10 minutes)</h1>
 <ul>
 <li data-marpit-fragment="1">using the sample code in the previous slide, create a constructor in the Cat class using <code>super</code></li>
-<li data-marpit-fragment="2">What other vaiables could fit in the class structure?</li>
+<li data-marpit-fragment="2">What other variables could fit in the class structure?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
-<h1>Exersize #2 (10 miniutes)</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h1>Exercise #2 (10 minutes)</h1>
 <ul>
 <li data-marpit-fragment="1">
-<p>Create a class named <code>Rectangle</code> containting (doubles) <code>length</code> and <code>width</code>. Then create two methods to print the area and perimeter.</p>
+<p>Create a class named <code>Rectangle</code> containing (doubles) <code>length</code> and <code>width</code>. Then create two methods to print the area and perimeter.</p>
 </li>
 <li data-marpit-fragment="2">
 <p>Let class <code>'Square'</code> inherit <code>Rectangle</code> with its constructor having a parameter for its side (suppose s), and call the constructor of its parent class as 'super(s,s)'.</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="uncover" style="--theme:uncover;"></section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="uncover" style="--theme:uncover;">
-<h1>Exersize #2 Starter Code</h1>
-<pre><code class="language-Java">Class Rectangle{
-  <span class="hljs-keyword">int</span> length;
-  <span class="hljs-keyword">int</span> breadth;
+<pre><code class="language-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span></span>{
+ <span class="hljs-keyword">int</span> length;
+ <span class="hljs-keyword">int</span> breadth;
 
-<span class="hljs-comment">// don&#x27;t forget Your constructor!</span>
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findArea</span><span class="hljs-params">()</span></span>{
-    <span class="hljs-comment">// code here</span>
-  }
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findPerimeter</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-comment">//code here</span>
-  }
+ <span class="hljs-comment">// don&#x27;t forget Your constructor!</span>
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findArea</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-comment">// code here</span>
+ }
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findPerimeter</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">//code here</span>
+ }
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span></span>{
@@ -218,15 +218,18 @@ System.out.println(student.getName());
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="uncover" style="--theme:uncover;"></section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="1" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
 <h1>Polymorphisim</h1>
 <ul>
-<li data-marpit-fragment="1">polymorphism is the provision of a single interface to entities of different types</li>
+<li data-marpit-fragment="1">
+<p>polymorphism is the provision of a single interface to entities of different types</p>
+</li>
+<li data-marpit-fragment="2">
+<p>We can use <code>instanceof</code> to check if an object belongs to a class</p>
+</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="uncover" style="--theme:uncover;"></section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
 <h1>&quot;Is a&quot; vs</h1>
 <ul>
 <li data-marpit-fragment="1">polymorphism is the provision of a single interface to entities of different types
@@ -237,7 +240,7 @@ System.out.println(student.getName());
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
 <h1>polymorphism example</h1>
 <ul>
 <li data-marpit-fragment="1">Say we have a class Animal with the function speak()</li>
@@ -245,7 +248,7 @@ System.out.println(student.getName());
 <li data-marpit-fragment="3">Which method(s) can be called on a Cat object? Which can be called on an Animal?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="6" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="6" data-theme="uncover" style="--theme:uncover;">
 <h1>Upcasting vs Downcasting</h1>
 <ul>
 <li data-marpit-fragment="1">Upcasting means we are taking a child object and casting it up, as the parent object
@@ -262,27 +265,75 @@ System.out.println(student.getName());
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="uncover" style="--theme:uncover;">
-<h1>Exersize 3, ordering off the kids menu</h1>
-<h3>Fix the following upcast:</h3>
-<pre><code class="language-Java">Class Person{
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-theme="uncover" style="--theme:uncover;">
+<h1>Exercise 3, ordering off the kids menu</h1>
+<p>Fix the following upcast:</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-theme="uncover" style="--theme:uncover;">
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     <span class="hljs-keyword">int</span> age;
-    Person(<span class="hljs-keyword">int</span> age) {
-        <span class="hljs-keyword">this</span>.age = age;
+    Person(<span class="hljs-keyword">int</span> setAge) {
+        age = setAge;
     }
 }
-Class Child extends Person{
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span></span>{
     <span class="hljs-keyword">int</span> age;
     <span class="hljs-keyword">boolean</span> kid;
-    Child(<span class="hljs-keyword">int</span> age, <span class="hljs-keyword">boolean</span> kid) {
-        <span class="hljs-keyword">this</span>.age = age;
+    Child(<span class="hljs-keyword">int</span> setAge, <span class="hljs-keyword">boolean</span> setKid) {
+        age = setAge;
+
     }
 }
 </code></pre>
-<pre><code>Thanks for coming!!!
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="uncover" style="--theme:uncover;">
+<h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content>Solutions </span></foreignObject></svg></h1>
+<p>Spoilers :P</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="uncover" style="--theme:uncover;">
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">protected</span> String name;
+  <span class="hljs-keyword">protected</span> String sound;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String n, String s)</span></span>{
+    name = n; 
+    sound = s; 
+  }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> cutenessLevel; 
+ <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> hasClaws; 
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String n, String s, <span class="hljs-keyword">double</span> c, <span class="hljs-keyword">boolean</span> h)</span> </span>{
+   <span class="hljs-keyword">super</span>(n, s);
+   cutenessLevel = c;
+   hasClaws = h;
+ } 
+}
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="uncover" style="--theme:uncover;"></section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-theme="uncover" style="--theme:uncover;">
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
+ <span class="hljs-keyword">int</span> l;
+ <span class="hljs-keyword">int</span> b;
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectange</span><span class="hljs-params">(<span class="hljs-keyword">int</span> setL, <span class="hljs-keyword">int</span> setB)</span> </span>{
+   l = setL;
+   b = setB;
+ }
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findArea</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">return</span> l * b;
+ }
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findPerimeter</span><span class="hljs-params">()</span></span>{
+   <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (l + b);
+ }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Square</span><span class="hljs-params">(<span class="hljs-keyword">int</span> setSize)</span> </span>{
+    <span class="hljs-keyword">super</span>(setSize, setSize);
+  }
+}
+</code></pre>
+</section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let o,r;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",({data:e,origin:o})=>{if(o===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),o=Number.parseFloat(t);Number.isNaN(o)||(r=o)}}catch(t){console.error(t)}}));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||r||t.currentScale||1;o!==c&&(o=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let o=0;o<u;o+=1){const r=t.children[o],a=r.getScreenCTM();if(a){const t=null!==(n=null===(e=r.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,o=null!==(s=null===(i=r.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=r.firstChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-o}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}}),!1!==l&&Array.from(i.querySelectorAll("iframe"),({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)})}o=1,r=void 0;const i=(t,e,o)=>{if(t.getAttribute(e)!==o)return t.setAttribute(e,o),!0};function a(t={}){const e="boolean"==typeof t?(t=>{const e=!t;return console.warn(`[DEPRECATION WARNING] Usage of observer() with boolean option has been deprecated. Please replace with the usage of option object: observer({ once: ${e?"true":"false"} }).`),{once:e}})(t):t,{once:o=!1,target:r=document}=e,a="Apple Computer, Inc."===navigator.vendor?[n]:[];let l=!o;const s=()=>{for(const t of a)t({target:r});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{var e;const o=t.firstChild,r=o.firstChild,{scrollWidth:n,scrollHeight:a}=r;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(o,"width",""+c),i(o,"height",""+d),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")})}(r),l&&window.requestAnimationFrame(s)};return s(),()=>{l=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),o=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:o})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),a=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),s={},i=function(e,t){return(t=t||{}).index=a.indexOf(e),t.slide=e,t},o=function(e,t){s[e]=(s[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(s[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){a[e]&&(n&&l("deactivate",i(n,t)),n=a[e],l("activate",i(n,t)))},d=function(e,t){var r=a.indexOf(n)+e;l(e>0?"next":"prev",i(n,t))&&c(r,t)},u={off:o,on:function(e,t){return(s[e]||(s[e]=[])).push(t),o.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return a.indexOf(n);l("slide",i(a[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:a,destroy:function(e){l("destroy",i(n,e)),s={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach(e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")}),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))})}function n(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],a=(r,a)=>{t=r,n=a,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const s=t<r||t===r&&n<=a;e.setAttribute("data-bespoke-marp-fragment",s?"active":"inactive"),t===r&&n===a?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=a;const s={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:a};e.fire("fragment",s)};e.on("next",({fragment:s=!0})=>{if(s){if(r(1))return a(t,n+1),!1;const s=t+1;e.fragments[s]&&a(s,0)}else{const r=e.fragments[t].length;if(n+1<r)return a(t,r-1),!1;const s=e.fragments[t+1];s&&a(t+1,s.length-1)}}),e.on("prev",({fragment:s=!0})=>{if(r(-1)&&s)return a(t,n-1),!1;const i=t-1;e.fragments[i]&&a(i,e.fragments[i].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const a=e.fragments[t];if(a){const{length:e}=a;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}a(t,r)}),a(0,0)}var r,a,s=(function(e){
 /*!
