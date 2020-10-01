@@ -59,37 +59,30 @@
 <li data-marpit-fragment="3">checkstyle is your friend</li>
 </ul>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
-
   <span class="hljs-keyword">private</span> String name;
-
   Dog(String name) {
     <span class="hljs-keyword">this</span>.name = name;
   }
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
 <h1>Static</h1>
 <ul>
-<li data-marpit-fragment="1">In the previous slide, each <code>Dog</code> object had its own method</li>
-<li data-marpit-fragment="2">Attaching the <code>static</code> keyword to attach the method to the class, rather than the instance</li>
-<li data-marpit-fragment="3"><code>static</code> class methods cannot access instance variables</li>
+<li data-marpit-fragment="1">Attaching the <code>static</code> keyword to attach the method to the class, rather than the instance</li>
+<li data-marpit-fragment="2"><code>static</code> class methods cannot access instance variables</li>
 </ul>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Building</span> </span>{
-
   <span class="hljs-keyword">private</span> String name;
   <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;
-
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Building</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> height)</span> </span>{
     <span class="hljs-keyword">this</span>.name = name;
     <span class="hljs-keyword">this</span>.height = height;
   }
-
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">return</span> name;
   }
 }
-
 Building student = <span class="hljs-keyword">new</span> Building(<span class="hljs-string">&quot;Siebel&quot;</span>, <span class="hljs-number">4</span>);
 <span class="hljs-comment">// Will this work? why/why not?</span>
 System.out.println(student.getName());
@@ -130,7 +123,6 @@ System.out.println(student.getName());
         Animal c1 = <span class="hljs-keyword">new</span> Cat();
     }
 }
-
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="1" data-theme="uncover" style="--theme:uncover;">
@@ -173,7 +165,6 @@ System.out.println(student.getName());
 <pre><code class="language-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
     <span class="hljs-keyword">protected</span> String name;
     <span class="hljs-keyword">protected</span> String sound;
-
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String n, String s)</span></span>{
         name = n; 
         sound = s; 
@@ -183,8 +174,6 @@ System.out.println(student.getName());
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> cutenessLevel; 
    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> hasClaws; 
-   
-   <span class="hljs-comment">// your constructor here</span>
 }
 </code></pre>
 </section>
@@ -196,10 +185,16 @@ System.out.println(student.getName());
 <li data-marpit-fragment="2">What other vaiables could fit in the class structure?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="uncover" style="--theme:uncover;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
 <h1>Exersize #2 (10 miniutes)</h1>
-<h3>Create a class named <code>Rectangle</code> containting (doubles) <code>length</code> and <code>width</code>. Then create two methods to print the area and perimeter.</h3>
-<h3>Let class <code>'Square'</code> inherit <code>Rectangle</code> with its constructor having a parameter for its side (suppose s), and call the constructor of its parent class as 'super(s,s)'.</h3>
+<ul>
+<li data-marpit-fragment="1">
+<p>Create a class named <code>Rectangle</code> containting (doubles) <code>length</code> and <code>width</code>. Then create two methods to print the area and perimeter.</p>
+</li>
+<li data-marpit-fragment="2">
+<p>Let class <code>'Square'</code> inherit <code>Rectangle</code> with its constructor having a parameter for its side (suppose s), and call the constructor of its parent class as 'super(s,s)'.</p>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="uncover" style="--theme:uncover;"></section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="uncover" style="--theme:uncover;">
@@ -209,12 +204,10 @@ System.out.println(student.getName());
   <span class="hljs-keyword">int</span> breadth;
 
 <span class="hljs-comment">// don&#x27;t forget Your constructor!</span>
-
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findArea</span><span class="hljs-params">()</span></span>{
     <span class="hljs-comment">// code here</span>
   }
-
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findPerimeter</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findPerimeter</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-comment">//code here</span>
   }
 }
@@ -274,16 +267,13 @@ System.out.println(student.getName());
 <h3>Fix the following upcast:</h3>
 <pre><code class="language-Java">Class Person{
     <span class="hljs-keyword">int</span> age;
-
     Person(<span class="hljs-keyword">int</span> age) {
         <span class="hljs-keyword">this</span>.age = age;
     }
 }
-
 Class Child extends Person{
     <span class="hljs-keyword">int</span> age;
     <span class="hljs-keyword">boolean</span> kid;
-
     Child(<span class="hljs-keyword">int</span> age, <span class="hljs-keyword">boolean</span> kid) {
         <span class="hljs-keyword">this</span>.age = age;
     }
