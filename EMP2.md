@@ -1,0 +1,277 @@
+---
+marp: false
+theme: uncover
+---
+
+# <!-- fit --> CS 199 EMP
+
+## <!-- fit --> Even More Practice
+
+---
+
+# 2 Calendar Update
+
+Thusday's CDT section will now start at 5 to match the sceduled course time (banner) 
+
+* Eastern timezone sessions, and Tuesdays will continue at sceduled times
+
+* Make sure to keep up with the calendar for links and timings
+
+---
+
+# Format
+
+* 3 practice problems every session
+
+* focused on practical understanding of concepts covered recently in class
+
+* slides and material available after class
+
+--- 
+
+# How to follow along
+
+* Small breakout rooms of working together 
+
+* Work for 10-15 minutes together, feel free to use paper, whiteboards, online share tools.
+
+* Use the `jeed` playground on the 125 homepage for the interactive running
+
+---
+
+# This
+
+* always refers to the current instance that is executing the method
+* in the example below `this` is used to distinguish name(the instance variable), and name(the method param)
+* checkstyle is your friend
+
+```java
+public class Dog {
+
+  private String name;
+
+  Dog(String name) {
+    this.name = name;
+  }
+}
+```
+
+---
+# Static
+
+* In the previous slide, each `Dog` object had its own method
+* Attaching the `static` keyword to attach the method to the class, rather than the instance
+* `static` class methods cannot access instance variables
+
+```java
+public class Building {
+
+  private String name;
+  private int height;
+
+  public Building(String name, int height) {
+    this.name = name;
+    this.height = height;
+  }
+
+  public static String getName() {
+    return name;
+  }
+}
+
+Building student = new Building("Siebel", 4);
+// Will this work? why/why not?
+System.out.println(student.getName());
+```
+---
+
+---
+# Final
+
+* keyword disallows a variable from being modified
+* Perfect for constants
+---
+
+
+---
+# 1) Inheritance
+
+* Inheritance can be useful when we have objects that share functionality
+* ```class SubClass extends BaseClass```
+* class Chuchu extends Pet
+---
+
+# Inheritance Example
+* what do you think happens here?
+
+```java
+public class Animal {
+    public Animal(){
+        System.out.println("New animal created!");
+    }
+}
+public class Cat extends Animal {
+    public Cat(){
+        System.out.println("New cat created!");
+    }
+}
+public class Example {
+    public static void main(String[] args){
+        Animal c1 = new Cat();
+    }
+}
+
+```
+---
+
+---
+# Inheritance Example
+* What gets printed here? 
+
+```java
+class Base {
+    final public void show() {
+       System.out.println("Base::show() called");
+    }
+}
+  
+class Derived extends Base {
+    public void show() {
+       System.out.println("Derived::show() called");
+    }
+}
+  
+class Main {
+    public static void main(String[] args) {
+        Base b = new Derived();;
+        b.show();
+    }
+}
+```
+---
+
+---
+# Private/Protected
+* ```Private``` variables in the parent class can't be accessed by child classes
+* Child classes can acess ```protected``` variables in the parent class
+---
+
+---
+# Super
+* the `super` keyword is used in the child constructor to call the parent constructor
+``` Java
+public class Animal {
+    protected String name;
+    protected String sound;
+
+    public Animal(String n, String s){
+        name = n; 
+        sound = s; 
+    }
+}
+
+public class Cat extends Animal {
+   public double cutenessLevel; 
+   protected boolean hasClaws; 
+   
+   // your constructor here
+}
+```
+---
+
+---
+# Exersize #1 (10 miniutes)
+* using the sample code in the previous slide, create a constructor in the Cat class using `super`
+* What other vaiables could fit in the class structure?
+---
+
+---
+# Exersize #2 (10 miniutes)
+### Create a class named ```Rectangle``` containting (doubles) ```length``` and ```width```. Then create two methods to print the area and perimeter. 
+
+### Let class ```'Square'``` inherit ```Rectangle``` with its constructor having a parameter for its side (suppose s), and call the constructor of its parent class as 'super(s,s)'. 
+---
+
+---
+# Exersize #2 Starter Code
+```Java
+Class Rectangle{
+  int length;
+  int breadth;
+
+// don't forget Your constructor!
+
+  public void findArea(){
+    // code here
+  }
+
+  public void findPerimeter(){
+    //code here
+  }
+}
+
+class Square extends Rectangle{
+  // code here
+  // don't forget Your constructor!
+}
+```
+---
+
+---
+# Polymorphisim
+* polymorphism is the provision of a single interface to entities of different types
+---
+
+---
+# "Is a" vs 
+* polymorphism is the provision of a single interface to entities of different types
+    * every instance of any Java class "is a" Object
+    * Dogs are (Pets are (Animals are Objects))
+---
+
+---
+# polymorphism example
+* Say we have a class Animal with the function speak()
+* Say we have class Cat that extends Animal, with a function meow()
+* Which method(s) can be called on a Cat object? Which can be called on an Animal?
+---
+
+---
+# Upcasting vs Downcasting
+* Upcasting means we are taking a child object and casting it up, as the parent object
+    * ie) casting `Object Cat` as an `Object Animal`
+* Downcasting means the opposite, taking a parent object, and casting it as a child
+    * ie) Animal myAnimal = new Cat();
+    * NOTE: if we aren't careful, we can ClassCastException
+    * the compiler is your BFF
+---
+
+---
+# Exersize 2, ordering off the kids menu
+### Fix the following upcast:
+
+```Java
+Class Person{
+    int age;
+
+    Person(int age) {
+        this.age = age;
+    }
+}
+
+Class Child extends Person{
+    int age;
+    boolean kid;
+
+    Child(int age, boolean kid) {
+        this.age = age;
+    }
+}
+```
+
+```
+Thanks for coming!!!
+```
+
+---
+
