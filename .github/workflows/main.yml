@@ -29,5 +29,5 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           PUBLISH_TO_BRANCH: master
           BASE_URL: https://cs199emp.netlify.app/
-          uses: ralexander-phi/marp-action@0.2
+        uses: ralexander-phi/marp-action@0.2
       
