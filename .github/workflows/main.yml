@@ -23,7 +23,6 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Marp autoconvert all slides
         run: |
-          npm install -g @marp-team/marp-cli
-          marp -I slides/ --output dist/
+          npx @marp-team/marp-cli -I slides/ --output dist/
