@@ -7,3 +7,18 @@ The `html` files are generated from the `markdown` files, don't try to edit thos
 You can find the [homepage](https://cs199emp.netlify.app/) here.
 
 Pull Requests welcome. 
+
+---
+
+## Using marp
+
+1. Install it (assuming you have `npm`)
+
+```bash
+npm install -g @marp-team/marp-cli
+```
+
+2. To convert
+```bash
+marp -I slides/ --output dist/
+```
