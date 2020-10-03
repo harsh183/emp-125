@@ -36,7 +36,7 @@ title: 6 Octover 2020
 
 * Work for 10-15 minutes together, feel free to use paper, whiteboards, online share tools.
 
-* Use the `jeed` playground on the 125 homepage for the interactive running
+* Use the code playground on the 125 homepage for the interactive running
 
 ---
 
