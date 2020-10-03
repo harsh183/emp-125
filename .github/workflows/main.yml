@@ -21,8 +21,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: marp-action
+        uses: ralexander-phi/marp-action@0.2
 
       # Runs a set of commands using the runners shell
-      - name: Marp autoconvert all slides
-        run: |
-          npx @marp-team/marp-cli -I slides/ --output dist/
+#       - name: Marp autoconvert all slides
+#         run: |
+#           npx @marp-team/marp-cli -I slides/ --output dist/
