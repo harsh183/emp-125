@@ -114,9 +114,9 @@ Object o = f; <span class="hljs-comment">// Upcast Fiction -&gt; Book</span>
 </li>
 </ol>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Romance prideAndPrejudice = <span class="hljs-keyword">new</span> Romance();
-Object o = prideAndPrejudice; <span class="hljs-comment">// up cast</span>
+Object o = prideAndPrejudice; 
 <span class="hljs-keyword">if</span> (o <span class="hljs-keyword">instanceof</span> Fiction) { <span class="hljs-comment">// if you don&#x27;t check you _may_ get an error</span>
-  Fiction f = (Fiction) o; 
+  Fiction f = (Fiction) o; <span class="hljs-comment">// downcast</span>
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
@@ -133,8 +133,8 @@ Object o = prideAndPrejudice; <span class="hljs-comment">// up cast</span>
 </li>
 </ul>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Romance prideAndPrejudice = <span class="hljs-keyword">new</span> Romance();
-Object o = prideAndPrejudice; <span class="hljs-comment">// up cast</span>
-<span class="hljs-keyword">if</span> (o <span class="hljs-keyword">instanceof</span> Fiction f) { <span class="hljs-comment">// if you don&#x27;t check you _may_ get an error</span>
+Object o = prideAndPrejudice;
+<span class="hljs-keyword">if</span> (o <span class="hljs-keyword">instanceof</span> Fiction f) { <span class="hljs-comment">// check + downcast</span>
   <span class="hljs-comment">// ...</span>
 }
 </span></span></foreignObject></svg></code></pre>
@@ -284,6 +284,7 @@ System.out.println(movie1.equals(movie3));
 <p>Spoilers</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<p>1</p>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transport</span> </span>{ }
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FourWheels</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Transport</span> </span>{ }
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sedan</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FourWheels</span> </span>{ }
@@ -302,6 +303,7 @@ Object o = b; <span class="hljs-comment">// convert b to Object</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<p>2</p>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Movie</span> </span>{
   <span class="hljs-keyword">private</span> String name;
   <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> year;
@@ -319,6 +321,7 @@ Object o = b; <span class="hljs-comment">// convert b to Object</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<p>3</p>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
   <span class="hljs-comment">// ...</span>
 }
