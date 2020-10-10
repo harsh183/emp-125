@@ -51,11 +51,23 @@ https://forms.gle/8yto1LvJ4hntiKNu7
 
 ---
 
+# Problem (10 minutes)
+
+---
+
 # <!-- fit --> Topic 2
 
 ---
 
+# Problem (10 minutes)
+
+---
+
 # <!-- fit --> Topic 3
+
+---
+
+# Problem (10 minutes)
 
 ---
 
