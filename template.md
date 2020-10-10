@@ -1,11 +1,17 @@
 ---
 marp: true
-title: 6 Octover 2020
+title: 13 Octover 2020
 ---
 
 # <!-- fit --> CS 199 EMP
 
 ## <!-- fit --> Even More Practice
+
+---
+
+# <!-- fit --> Attendance Link:
+
+https://forms.gle/8yto1LvJ4hntiKNu7
 
 ---
 
@@ -17,7 +23,8 @@ title: 6 Octover 2020
 
 * Calendar contains zoom links
 
-* Attend 10 ones for credit. 
+* Attend 10 sessions for credit, attendence via google form.
+
 ---
 
 # Format
@@ -37,6 +44,18 @@ title: 6 Octover 2020
 * Work for 10-15 minutes together, feel free to use paper, whiteboards, online share tools.
 
 * Use the code playground on the 125 homepage for the interactive running
+
+---
+
+# <!-- fit --> Topic 1
+
+---
+
+# <!-- fit --> Topic 2
+
+---
+
+# <!-- fit --> Topic 3
 
 ---
 
