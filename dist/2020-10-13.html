@@ -132,22 +132,78 @@ System.out.println(date);
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Type Inference</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="2">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="5">
 <ul>
 <li data-marpit-fragment="1">
 <p>Type inference is Java compiler smartly understanding data types without having to specify it.</p>
 </li>
-<li data-marpit-fragment="2"></li>
+<li data-marpit-fragment="2">
+<p>At first glance it can seem similar to scripting languages like <code>Python</code>, <code>JavaScript</code> and <code>Ruby</code> which guess the data type.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>Unike scripting languages, type inference is mathematically correct so it doesn't innvolve guess work and retains type safety.</p>
+</li>
+<li data-marpit-fragment="4">
+<p>This is especially helpful for people learning to program, since it makes code simpler and faster to write.</p>
+</li>
+<li data-marpit-fragment="5">
+<p>Becoming more popular in newer languages like <code>C++</code>, <code>Rust</code>, <code>Kotlin</code>, <code>Swift</code>, <code>TypeScript</code></p>
+</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="1">
+<ul>
+<li data-marpit-fragment="1">To use type inference use <code>var</code> instead of the variable type.</li>
+</ul>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> integer = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">var</span> doubleBoi = <span class="hljs-number">3.14159</span>;
+<span class="hljs-keyword">var</span> intArray = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">5</span>];
+<span class="hljs-keyword">var</span> array3d = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[<span class="hljs-number">5</span>][<span class="hljs-number">5</span>][<span class="hljs-number">5</span>];
+<span class="hljs-keyword">var</span> randomObject = <span class="hljs-keyword">new</span> StringBuilder();
+<span class="hljs-keyword">var</span> netid = <span class="hljs-string">&quot;hdeep2&quot;</span>;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="1">
+<ul>
+<li data-marpit-fragment="1">It can also infer the result of computations</li>
+</ul>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> radiusWithoutBorder = Integer.parseInt(<span class="hljs-string">&quot;3&quot;</span>); <span class="hljs-comment">// int</span>
+<span class="hljs-keyword">var</span> radius = radiusWithoutBorder + <span class="hljs-number">1</span>; <span class="hljs-comment">// int</span>
+<span class="hljs-keyword">var</span> area = <span class="hljs-number">3.14</span> * radius * radius; <span class="hljs-comment">// double</span>
+System.out.println(area);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">int</span>[][][] array3d = {{{<span class="hljs-number">0</span>, <span class="hljs-number">1</span>},
+                      {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}},
+                     {{<span class="hljs-number">1</span>, <span class="hljs-number">0</span>},
+                      {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}}};  
+<span class="hljs-keyword">var</span> sum = <span class="hljs-number">0</span>;
+<span class="hljs-comment">// useful in for loops</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> matrix: array3d) { <span class="hljs-comment">// int[][]</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> vector: matrix) { <span class="hljs-comment">// int[]</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> num: vector) {
+      sum += num;
+    }
+  }
+}
+System.out.println(sum);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="1">
+<h1>Problem (10 minutes)</h1>
+<ul>
+<li data-marpit-fragment="1">Convert the following class to use as much type inference as possible</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Serialization</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Solutions</span></foreignObject></svg></h1>
 <p>Spoilers</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="1">
 <ol>
 <li data-marpit-fragment="1"></li>
 </ol>
@@ -157,12 +213,12 @@ System.out.println(date);
 System.out.println(date);
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="1">
 <ol start="2">
 <li data-marpit-fragment="1"></li>
 </ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="1">
 <ol start="3">
 <li data-marpit-fragment="1"></li>
 </ol>
