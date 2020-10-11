@@ -162,12 +162,12 @@ System.out.println(date);
 <ul>
 <li data-marpit-fragment="1">To use type inference use <code>var</code> instead of the variable type.</li>
 </ul>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> integer = <span class="hljs-number">5</span>;
-<span class="hljs-keyword">var</span> doubleBoi = <span class="hljs-number">3.14159</span>;
-<span class="hljs-keyword">var</span> intArray = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">5</span>];
-<span class="hljs-keyword">var</span> array3d = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[<span class="hljs-number">5</span>][<span class="hljs-number">5</span>][<span class="hljs-number">5</span>];
-<span class="hljs-keyword">var</span> randomObject = <span class="hljs-keyword">new</span> StringBuilder();
-<span class="hljs-keyword">var</span> netid = <span class="hljs-string">&quot;hdeep2&quot;</span>;
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> integer = <span class="hljs-number">5</span>; <span class="hljs-comment">// int</span>
+<span class="hljs-keyword">var</span> doubleBoi = <span class="hljs-number">3.14159</span>; <span class="hljs-comment">// double</span>
+<span class="hljs-keyword">var</span> intArray = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">5</span>]; <span class="hljs-comment">// int[]</span>
+<span class="hljs-keyword">var</span> array3d = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[<span class="hljs-number">5</span>][<span class="hljs-number">5</span>][<span class="hljs-number">5</span>]; <span class="hljs-comment">// int[][][]</span>
+<span class="hljs-keyword">var</span> randomObject = <span class="hljs-keyword">new</span> StringBuilder(); <span class="hljs-comment">// StringBuilder</span>
+<span class="hljs-keyword">var</span> netid = <span class="hljs-string">&quot;hdeep2&quot;</span>; <span class="hljs-comment">// String</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="1">
@@ -230,11 +230,42 @@ System.out.println(sum);
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Serialization</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="3">
+<h1>Deserialization problem</h1>
+<ul>
+<li data-marpit-fragment="1">
+<p>Note: The Sept 24 Covers CSV Deserialization (Parsing) as well as two different homework problems.</p>
+</li>
+<li data-marpit-fragment="2">
+<p>Feel free to use that for practice.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>Here I will focus on serialization</p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="3">
+<h1>Serialization</h1>
+<ul>
+<li data-marpit-fragment="1">
+<p>Process of converting data in our program to some format so we can transmit it somewhere.</p>
+</li>
+<li data-marpit-fragment="2">
+<p>Often used to communicate over the web, sometimes over different programming languages too.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>Popular formats are <code>JSON</code>, <code>CSV</code>, <code>YAML</code> etc.</p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h1>Deserialization</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Solutions</span></foreignObject></svg></h1>
 <p>Spoilers</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-marpit-fragments="1">
 <ol>
 <li data-marpit-fragment="1"></li>
 </ol>
@@ -244,7 +275,7 @@ System.out.println(sum);
 System.out.println(date);
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-fragments="1">
 <ol start="2">
 <li data-marpit-fragment="1"></li>
 </ol>
@@ -266,7 +297,7 @@ System.out.println(date);
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-marpit-fragments="1">
 <ol start="3">
 <li data-marpit-fragment="1"></li>
 </ol>
