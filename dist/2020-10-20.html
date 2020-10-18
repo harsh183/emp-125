@@ -80,13 +80,67 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
-<h1>Problem (10 minutes)</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="3">
+<h1>Syntax</h1>
+<ul>
+<li data-marpit-fragment="1">
+<p>You can set type of variables with the name of the interface. <code>Comparable x = &quot;harsh&quot;</code> for example.</p>
+</li>
+<li data-marpit-fragment="2">
+<p>Anything that <code>implements</code> an interface will have all the variables and methods the interface has which you can use.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>It can also be a datatype for a function parameter.</p>
+</li>
+</ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="3">
+<h1>Problem (10 minutes)</h1>
+<ul>
+<li data-marpit-fragment="1">
+<p>Let's say we have an interface <code>Taxable</code> for a person who has to pay taxes.</p>
+</li>
+<li data-marpit-fragment="2">
+<p><code>Taxable</code> has a method <code>calculateTax()</code> which gives you their tax due.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>Get the sum of all the tax owed</p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Taxable</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">calculateTax</span><span class="hljs-params">()</span></span>;
+}
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Taxable</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> income;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(<span class="hljs-keyword">double</span> setIncome)</span> </span>{
+    income = setIncome;
+  }
+  <span class="hljs-comment">// function implementations hidden</span>
+}
+
+Student[] students = {<span class="hljs-keyword">new</span> Student(<span class="hljs-number">1500</span>), <span class="hljs-keyword">new</span> Student(<span class="hljs-number">20</span>), <span class="hljs-keyword">new</span> Student(<span class="hljs-number">3999</span>)};
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Implementing Interfaces</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="4">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="3">
+<h1>Syntax</h1>
+<ul>
+<li data-marpit-fragment="1">
+<p>When implementing an interface we declare a class and after it put the <code>implements</code> keyword</p>
+</li>
+<li data-marpit-fragment="2">
+<p>Make sure to implement all the functions and variables listed</p>
+</li>
+<li data-marpit-fragment="3">
+<p>Make sure to follow rules of <code>scope</code>. So if it requires some functions be <code>public</code> yours should be too.</p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="3">
 <h1>Problem (10 minutes)</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -96,14 +150,11 @@
 <p>Credit hours should be a instance variable of type <code>int[]</code> like <code>{3, 3, 4, 1, 3}</code></p>
 </li>
 <li data-marpit-fragment="3">
-<p>Don't forget <code>@Override</code></p>
-</li>
-<li data-marpit-fragment="4">
 <p>Use <code>assert</code> for making sure the other type is a <code>Student</code></p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Comparable</span> </span>{
   <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] creditHours;
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] setHours)</span> </span>{
@@ -116,10 +167,10 @@
 <span class="hljs-keyword">assert</span> (s2.compareTo(s1) &gt; <span class="hljs-number">0</span>);
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Lambda expressions</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="5">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="5">
 <h1>Lambdas</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -139,7 +190,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
 <h1>Syntax</h1>
 <p>The syntax is a bit tricky compared to normal functions.</p>
 <ol>
@@ -160,14 +211,14 @@
 </li>
 </ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
 <h1>Interface</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AreaInterface</span> </span>{
   <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">area</span><span class="hljs-params">(<span class="hljs-keyword">double</span> a)</span></span>;
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
 <h1>Declare</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AreaInterface</span> </span>{
   <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">area</span><span class="hljs-params">(<span class="hljs-keyword">double</span> a)</span></span>;
@@ -177,7 +228,7 @@ AreaInterface circle;
 AreaInterface square;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
 <h1>Create Lambdas</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>AreaInterface circle = (radius) -&gt; {
   <span class="hljs-keyword">var</span> area = <span class="hljs-number">3.14</span> * radius * radius; 
@@ -188,7 +239,7 @@ AreaInterface square = (side) -&gt; side * side;
 <span class="hljs-comment">// single line syntax you don&#x27;t need to mention return or {}</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
 <h1>Use with dot notation</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AreaInterface</span> </span>{
   <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">area</span><span class="hljs-params">(<span class="hljs-keyword">double</span> a)</span></span>;
@@ -204,7 +255,7 @@ System.out.println(circle.area(<span class="hljs-number">10</span>));
 System.out.println(square.area(<span class="hljs-number">5</span>));
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="4">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="4">
 <h1>Why not just functions?</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -221,7 +272,7 @@ System.out.println(square.area(<span class="hljs-number">5</span>));
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.Arrays;
 
 String[] myArray = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">&quot;amirtha&quot;</span>, <span class="hljs-string">&quot;daniel&quot;</span>, <span class="hljs-string">&quot;rima&quot;</span>, <span class="hljs-string">&quot;davis&quot;</span>};
@@ -235,7 +286,7 @@ String[] newArray = Arrays.stream(myArray) <span class="hljs-comment">// convert
 <span class="hljs-comment">// don&#x27;t worry if you don&#x27;t fully understand the syntax yet</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="4">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-fragments="4">
 <h1>Problem (10 minutes)</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -252,7 +303,7 @@ String[] newArray = Arrays.stream(myArray) <span class="hljs-comment">// convert
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
 <h1>Starter code</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TestCase</span> </span>{
   <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>;
@@ -260,7 +311,7 @@ String[] newArray = Arrays.stream(myArray) <span class="hljs-comment">// convert
 <span class="hljs-comment">// print title if case fails</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">checkCase</span><span class="hljs-params">(String title, TestCase t)</span> </span>{
   <span class="hljs-keyword">if</span> (t.test() == <span class="hljs-keyword">false</span>) {
-    System.out.println(title);
+    System.out.println(<span class="hljs-string">&quot;Failed: &quot;</span> + title);
   }
 }
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>{
@@ -269,16 +320,33 @@ String[] newArray = Arrays.stream(myArray) <span class="hljs-comment">// convert
 checkCase(<span class="hljs-string">&quot;Adding nothing gives the same number&quot;</span>, () -&gt; add(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>) == <span class="hljs-number">5</span>);
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Solutions</span></foreignObject></svg></h1>
 <p>Spoilers</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
 <h3>1)</h3>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Taxable</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">calculateTax</span><span class="hljs-params">()</span></span>;
+}
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Taxable</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> income;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(<span class="hljs-keyword">double</span> setIncome)</span> </span>{
+    income = setIncome;
+  }
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateTax</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0.15</span> * income;
+  }
+}
+Student[] students = {<span class="hljs-keyword">new</span> Student(<span class="hljs-number">1500</span>), <span class="hljs-keyword">new</span> Student(<span class="hljs-number">20</span>), <span class="hljs-keyword">new</span> Student(<span class="hljs-number">3999</span>)};
+<span class="hljs-keyword">var</span> sum = <span class="hljs-number">0.0</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> s: students) {
+  sum += s.calculateTax();
+}
+</span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">@Override</span>
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compareTo</span><span class="hljs-params">(Object o)</span> </span>{
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compareTo</span><span class="hljs-params">(Object o)</span> </span>{
     <span class="hljs-keyword">assert</span> o <span class="hljs-keyword">instanceof</span> Student;
     <span class="hljs-keyword">var</span> ownGrades = <span class="hljs-number">0</span>;
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> hours: creditHours) {
@@ -300,18 +368,27 @@ checkCase(<span class="hljs-string">&quot;Adding nothing gives the same number&q
   }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
-<h3>3)</h3>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TestCase</span> </span>{
   <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>;
 }
+
+<span class="hljs-comment">// print title if case fails</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">checkCase</span><span class="hljs-params">(String title, TestCase t)</span> </span>{
   <span class="hljs-keyword">if</span> (t.test() == <span class="hljs-keyword">false</span>) {
-    System.out.println(title);
+    System.out.println(<span class="hljs-string">&quot;Failed: &quot;</span> + title);
   }
 }
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
 
-
+checkCase(<span class="hljs-string">&quot;Adding nothing gives the same number&quot;</span>, () -&gt; add(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>) == <span class="hljs-number">5</span>);
+checkCase(<span class="hljs-string">&quot;It works with negative numbers&quot;</span>, () -&gt; add(<span class="hljs-number">5</span>, -<span class="hljs-number">1</span>) == <span class="hljs-number">4</span>);
+checkCase(<span class="hljs-string">&quot;Order doesn&#x27;t matter&quot;</span>, () -&gt; add(-<span class="hljs-number">1</span>, <span class="hljs-number">5</span>) == <span class="hljs-number">4</span>);
+checkCase(<span class="hljs-string">&quot;Two zeroes gives zero&quot;</span>, () -&gt; add(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>) == <span class="hljs-number">0</span>);
+<span class="hljs-comment">// example of a failing case due to error</span>
+checkCase(<span class="hljs-string">&quot;Two numbers of absolute signs gives 0&quot;</span>, () -&gt; add(<span class="hljs-number">5</span>, -<span class="hljs-number">5</span>) == <span class="hljs-number">1</span>);
 </span></span></foreignObject></svg></code></pre>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let o,r;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",({data:e,origin:o})=>{if(o===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),o=Number.parseFloat(t);Number.isNaN(o)||(r=o)}}catch(t){console.error(t)}}));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||r||t.currentScale||1;o!==c&&(o=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let o=0;o<u;o+=1){const r=t.children[o],a=r.getScreenCTM();if(a){const t=null!==(n=null===(e=r.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,o=null!==(s=null===(i=r.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=r.firstChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-o}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}}),!1!==l&&Array.from(i.querySelectorAll("iframe"),({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)})}o=1,r=void 0;const i=(t,e,o)=>{if(t.getAttribute(e)!==o)return t.setAttribute(e,o),!0};function a(t={}){const e="boolean"==typeof t?(t=>{const e=!t;return console.warn(`[DEPRECATION WARNING] Usage of observer() with boolean option has been deprecated. Please replace with the usage of option object: observer({ once: ${e?"true":"false"} }).`),{once:e}})(t):t,{once:o=!1,target:r=document}=e,a="Apple Computer, Inc."===navigator.vendor?[n]:[];let l=!o;const s=()=>{for(const t of a)t({target:r});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{var e;const o=t.firstChild,r=o.firstChild,{scrollWidth:n,scrollHeight:a}=r;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(o,"width",""+c),i(o,"height",""+d),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")})}(r),l&&window.requestAnimationFrame(s)};return s(),()=>{l=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),o=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:o})})(s?s.getRootNode():document)}();
