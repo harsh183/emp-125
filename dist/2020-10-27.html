@@ -84,16 +84,62 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="1">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="6">
 <h1>Array List resize</h1>
 <ul>
-<li data-marpit-fragment="1"></li>
+<li data-marpit-fragment="1">
+<p>Resizing gets more complicated</p>
+</li>
+<li data-marpit-fragment="2">
+<p>When you add elements you have to resize a new array which is larger and copy everything over.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>a) Copy everything as is till the index you want to insert at b</p>
+</li>
+<li data-marpit-fragment="4">
+<p>b) At the index insert it in</p>
+</li>
+<li data-marpit-fragment="5">
+<p>c) After that resume copying (make sure to account for offsets)</p>
+</li>
+<li data-marpit-fragment="6">
+<p>For reference: Look at the <code>ArrayList</code> homework.</p>
+</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="3">
 <h1>Problem (10 minutes)</h1>
+<ul>
+<li data-marpit-fragment="1">
+<p>ArrayList <code>int delete(int index)</code></p>
+</li>
+<li data-marpit-fragment="2">
+<p>The return value will be what you deleted.</p>
+</li>
+<li data-marpit-fragment="3">
+<p>The size should reduce by one</p>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayList</span> </span>{
+  <span class="hljs-keyword">int</span>[] array;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ArrayList</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] setArray)</span> </span>{
+    array = setArray;
+  }
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <span class="hljs-comment">// TODO</span>
+  }
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <span class="hljs-comment">// TODO</span>
+  }
+}
+<span class="hljs-keyword">var</span> l = <span class="hljs-keyword">new</span> ArrayList(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">10</span>, <span class="hljs-number">25</span>, <span class="hljs-number">35</span>});
+System.out.println(Arrays.toString(l.array)); <span class="hljs-comment">// should be [10, 35]</span>
+<span class="hljs-keyword">assert</span> l.delete(<span class="hljs-number">1</span>) == <span class="hljs-number">25</span>;
+<span class="hljs-keyword">assert</span> l.size() == <span class="hljs-number">2</span>;
+</span></span></foreignObject></svg></code></pre>
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> LinkedList</span></foreignObject></svg></h1>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
