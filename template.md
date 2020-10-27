@@ -33,7 +33,7 @@ https://forms.gle/8yto1LvJ4hntiKNu7
 
 * focused on practical understanding of concepts covered recently in class
 
-* slides and material available after class
+* slides and material available after both sessions
 
 --- 
 
@@ -71,9 +71,12 @@ https://forms.gle/8yto1LvJ4hntiKNu7
 
 ---
 
-# <!-- fit --> Solutions
+#  <!-- fit --> Solutions 
+## <!-- fit --> (no peeking, it's for your own good!)
 
-Spoilers
+---
+
+## <!-- fit --> (no seriously, attempt the problems with your groupmates first!)
 
 ---
 
