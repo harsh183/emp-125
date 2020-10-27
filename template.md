@@ -1,6 +1,6 @@
 ---
 marp: true
-title: 13 October 2020
+title: 13 Oct 2020
 ---
 
 # <!-- fit --> CS 199 EMP
