@@ -110,9 +110,9 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
 <h1>Problem 1: Linked List Insert</h1>
 <p>Given the location of the head of a linked list, an (int) index to insert at and a value, insert a new node with the given value at the given position. <strong>give runtime as well</strong></p>
-<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> value;
-  <span class="hljs-keyword">private</span> Node next;
+<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> value;
+  <span class="hljs-keyword">public</span> Node next;
 
   Node(Node setValue, Node setNext) {
     value = setValue;
@@ -153,7 +153,7 @@ insertAt(Node head, <span class="hljs-keyword">int</span> data, <span class="hlj
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
 <h1>Problem 2: Most common word</h1>
 <p>Given a list of words, return the word that occurs most often. Use a map to track the word (key), and the number of occourences you see of it(value).</p>
-<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">mostCommonWord</span><span class="hljs-params">(List&lt;String&gt;)</span> </span>{
+<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">mostCommonWord</span><span class="hljs-params">(List&lt;String&gt; words)</span> </span>{
    Map&lt;String, Integer&gt; frequencyMap;
    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> YOUR CODE HERE</span>
 }
@@ -195,60 +195,58 @@ doccumentation: <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Map
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
 <h3>1)</h3>
-<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> value;
-  <span class="hljs-keyword">private</span> Node next;
-
-  Node(Object setValue, Node setNext) {
-    value = setValue;
-    next = setNext;
+<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insertAt</span><span class="hljs-params">(Node head, <span class="hljs-keyword">int</span> data, <span class="hljs-keyword">int</span> position)</span> </span>{
+  Node current = head;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; position - <span class="hljs-number">1</span>; i++) {
+    current = current.next;
   }
-}
-
-insertAt(Node head, <span class="hljs-keyword">int</span> data, <span class="hljs-keyword">int</span> position) {
+  Node newNode = <span class="hljs-keyword">new</span> Node(data, current.next);
+  current.next = newNode;
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
 <h3>2)</h3>
-<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>  <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">MostCommonWord</span><span class="hljs-params">(List&lt;String&gt;)</span> </span>{
-     Map&lt;String, Integer&gt; frequencyMap;
-     <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;
+<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.Map;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.List;
 
-    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> YOUR CODE HERE</span>
-    <span class="hljs-keyword">for</span>(String word: String) {
-      <span class="hljs-keyword">if</span> (frequencyMap.containsKey(Object key)) {
-          magazineMap.get(s) += <span class="hljs-number">1</span>;
+<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">mostCommonWord</span><span class="hljs-params">(List&lt;String&gt; words)</span> </span>{
+  Map&lt;String, Integer&gt; frequencyMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+  String commonWord = <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;
 
-      } <span class="hljs-keyword">else</span> {
-        magazineMap.put(word, <span class="hljs-number">1</span>);
-
-      }
-
-      <span class="hljs-keyword">if</span> (magazineMap.get(s) &gt; max) {
-        max = magazineMap.get(s);
-      }
+  <span class="hljs-keyword">for</span> (String word: words) {
+    <span class="hljs-keyword">int</span> val = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (frequencyMap.containsKey(word)) {
+      val += frequencyMap.get(word);
     }
+    frequencyMap.put(word, <span class="hljs-number">1</span>);
 
-    <span class="hljs-keyword">return</span> max;
+    <span class="hljs-keyword">if</span> (val &gt; max) {
+      max = val;
+      commonWord = word;
+    }
   }
+
+  <span class="hljs-keyword">return</span> commonWord;
+}
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
 <h3>3)</h3>
-<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">MostPopularHouse</span><span class="hljs-params">(Map&lt;String, Integer&gt; visitorsByHouse)</span> </span>{
-  String mostPopular
+<pre><code class="language-Java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">mostPopularHouse</span><span class="hljs-params">(Map&lt;String, Integer&gt; visitorsByHouse)</span> </span>{
+  String mostPopular = <span class="hljs-string">&quot;&quot;</span>;
   <span class="hljs-keyword">int</span> maxVisitors = <span class="hljs-number">0</span>;
 
   <span class="hljs-keyword">for</span>(Map.Entry&lt;String, Integer&gt; house : visitorsByHouse.entrySet()) {
-    visitors = house.getKey();
+    <span class="hljs-keyword">int</span> visitors = house.getValue();
 
     <span class="hljs-keyword">if</span>(visitors &gt; maxVisitors) {
       maxVisitors =  visitors;
-      mostPopular = house.getValue();
+      mostPopular = house.getKey();
     }
   }
-
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
