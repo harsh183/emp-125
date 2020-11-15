@@ -23,7 +23,7 @@ https://forms.gle/8yto1LvJ4hntiKNu7
 
 * Calendar contains zoom links
 
-* Attend 10 sessions for credit, attendence via google form.
+* Attend 7 sessions for credit, attendence via google form.
 
 ---
 
