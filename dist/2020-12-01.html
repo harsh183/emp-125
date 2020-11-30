@@ -130,7 +130,7 @@
 <p>Take a dot product of two arrays that represent vectors.</p>
 </li>
 <li data-marpit-fragment="2">
-<p>If both arrays are not the same length throw an <code>IllegalArgumentException</code> with the message <code>&quot;Not equal length&quot;</code></p>
+<p>If both arrays are not the same length, or either array is <code>null</code> throw an <code>IllegalArgumentException</code></p>
 </li>
 <li data-marpit-fragment="3">
 <p>Recall that the dot product is multiplying each component and summing it up.</p>
@@ -141,9 +141,27 @@
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">dot</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span>[] b)</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">int</span>[] a = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>};
+<span class="hljs-keyword">int</span>[] b = {<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>};
+<span class="hljs-keyword">int</span>[] c = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>};
+<span class="hljs-keyword">int</span>[] d = <span class="hljs-keyword">null</span>;
+<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">dot</span><span class="hljs-params">(a, b)</span> </span>== <span class="hljs-number">321</span>;
+<span class="hljs-keyword">try</span> {
+  dot(b, c);
+  dot(b, d);
+} <span class="hljs-keyword">catch</span> (IllegalArgumentException e) {
+  System.out.println(<span class="hljs-string">&quot;This should happen&quot;</span>);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Lists</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="4">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="4">
 <h1>Lists</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -160,7 +178,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="6">
 <h1>Review: ArrayList</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -183,7 +201,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="7">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="7">
 <h1>Review: Array List add resize</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -209,7 +227,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="8">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="8">
 <h1>Review: LinkedList</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -238,7 +256,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="7">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="7">
 <h1>Review: LinkedList resize add</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -264,7 +282,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="2">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="2">
 <h1>Problem (10 minutes)</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -275,10 +293,32 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
+  <span class="hljs-keyword">int</span> value;
+  Node next;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Node</span><span class="hljs-params">(<span class="hljs-keyword">int</span> setValue, Node setNext)</span> </span>{
+    value = setValue;
+    next = setNext;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">(Node list)</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">var</span> list = <span class="hljs-keyword">new</span> Node(<span class="hljs-number">5</span>, <span class="hljs-keyword">new</span> Node(<span class="hljs-number">6</span>, <span class="hljs-keyword">new</span> Node(<span class="hljs-number">7</span>, <span class="hljs-keyword">null</span>)));
+<span class="hljs-keyword">var</span> oneItem = <span class="hljs-keyword">new</span> Node(<span class="hljs-number">10</span>, <span class="hljs-keyword">null</span>);
+Node emptyList = <span class="hljs-keyword">null</span>;
+<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">size</span><span class="hljs-params">(list)</span> </span>== <span class="hljs-number">3</span>;
+<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">size</span><span class="hljs-params">(oneItem)</span> </span>== <span class="hljs-number">1</span>;
+<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">size</span><span class="hljs-params">(emptyList)</span> </span>== <span class="hljs-number">0</span>;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Maps</span></foreignObject></svg></h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="6">
 <h1>Maps</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -301,7 +341,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="5">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="5">
 <h1>Review: Hashing</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">@Override</span> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span> </span>{
   <span class="hljs-keyword">return</span> Objects.hash(x, y, z);
@@ -318,7 +358,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="4">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-fragments="4">
 <h1>Problem (15 minutes)</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -328,28 +368,91 @@
 <p>Print the name of the student who scored the most points.</p>
 </li>
 <li data-marpit-fragment="3">
-<p>Print the number of students who need a CR, that is students in the range of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>70</mn><mo separator="true">,</mo><mn>83</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[70, 83]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">7</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mord">3</span><span class="mclose">]</span></span></span></span></p>
+<p>Print the number of students who need a CR, that is students in the range of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>70</mn><mo separator="true">,</mo><mn>83</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[70, 83)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">7</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mord">3</span><span class="mclose">)</span></span></span></span></p>
 </li>
 <li data-marpit-fragment="4">
 <p>Print the average score of the class</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.HashMap;
+
+<span class="hljs-keyword">var</span> grades = <span class="hljs-keyword">new</span> HashMap&lt;String, Integer&gt;();
+grades.put(<span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-number">71</span>);
+grades.put(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-number">43</span>);
+grades.put(<span class="hljs-string">&quot;Clara&quot;</span>, <span class="hljs-number">94</span>);
+
+<span class="hljs-keyword">int</span> maxScore = -<span class="hljs-number">1</span>; <span class="hljs-comment">// or some impossible value</span>
+<span class="hljs-keyword">var</span> maxName = <span class="hljs-string">&quot;&quot;</span>;
+<span class="hljs-keyword">double</span> scoreSum = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">int</span> peopleWhoNeedCr = <span class="hljs-number">0</span>;
+
+System.out.println(<span class="hljs-string">&quot;Best student: &quot;</span> + maxName);
+System.out.println(<span class="hljs-string">&quot;Average: &quot;</span> + average);
+System.out.println(<span class="hljs-string">&quot;Students who need CR: &quot;</span> + peopleWhoNeedCr);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
 <h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Solutions</span></foreignObject></svg></h1>
 <h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> (no peeking, it's for your own good!)</span></foreignObject></svg></h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
 <h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> (no seriously, attempt the problems with your groupmates first!)</span></foreignObject></svg></h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
 <h3>1)</h3>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">dot</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span>[] b)</span> </span>{
+  <span class="hljs-keyword">if</span> (a == <span class="hljs-keyword">null</span> || b == <span class="hljs-keyword">null</span> || a.length != b.length) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException();
+  }
+  <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a.length; i++) {
+    sum += a[i] * b[i];
+  }
+  <span class="hljs-keyword">return</span> sum;
+}
+</span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
 <h3>2)</h3>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">(Node list)</span> </span>{
+  <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (list != <span class="hljs-keyword">null</span>) {
+    list = list.next;
+    count++;
+  }
+  <span class="hljs-keyword">return</span> count;
+}
+</span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
 <h3>3)</h3>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.HashMap;
+
+<span class="hljs-keyword">var</span> grades = <span class="hljs-keyword">new</span> HashMap&lt;String, Integer&gt;();
+grades.put(<span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-number">71</span>);
+grades.put(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-number">43</span>);
+grades.put(<span class="hljs-string">&quot;Clara&quot;</span>, <span class="hljs-number">94</span>);
+
+<span class="hljs-keyword">int</span> maxScore = -<span class="hljs-number">1</span>; <span class="hljs-comment">// or some impossible value</span>
+<span class="hljs-keyword">var</span> maxName = <span class="hljs-string">&quot;&quot;</span>;
+<span class="hljs-keyword">double</span> scoreSum = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">int</span> peopleWhoNeedCr = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> entry : grades.entrySet()) {
+  <span class="hljs-keyword">var</span> name = entry.getKey();
+  <span class="hljs-keyword">var</span> score = entry.getValue(); 
+  scoreSum += score;
+  <span class="hljs-keyword">if</span> (maxScore &lt; score) {
+    maxScore = score;
+    maxName = name;
+  }
+  <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">70</span> &amp;&amp; score &lt; <span class="hljs-number">83</span>) {
+    peopleWhoNeedCr++;
+  }
+}
+<span class="hljs-keyword">double</span> average = scoreSum / grades.size();
+</span></span></foreignObject></svg></code></pre>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let o,r;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",({data:e,origin:o})=>{if(o===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),o=Number.parseFloat(t);Number.isNaN(o)||(r=o)}}catch(t){console.error(t)}}));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||r||t.currentScale||1;o!==c&&(o=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let o=0;o<u;o+=1){const r=t.children[o],a=r.getScreenCTM();if(a){const t=null!==(n=null===(e=r.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,o=null!==(s=null===(i=r.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=r.firstChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-o}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}}),!1!==l&&Array.from(i.querySelectorAll("iframe"),({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)})}o=1,r=void 0;const i=(t,e,o)=>{if(t.getAttribute(e)!==o)return t.setAttribute(e,o),!0};function a(t={}){const e="boolean"==typeof t?(t=>{const e=!t;return console.warn(`[DEPRECATION WARNING] Usage of observer() with boolean option has been deprecated. Please replace with the usage of option object: observer({ once: ${e?"true":"false"} }).`),{once:e}})(t):t,{once:o=!1,target:r=document}=e,a="Apple Computer, Inc."===navigator.vendor?[n]:[];let l=!o;const s=()=>{for(const t of a)t({target:r});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{var e;const o=t.firstChild,r=o.firstChild,{scrollWidth:n,scrollHeight:a}=r;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(o,"width",""+c),i(o,"height",""+d),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")})}(r),l&&window.requestAnimationFrame(s)};return s(),()=>{l=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),o=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:o})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),o={},a=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){o[e]=(o[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(o[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",a(n,t)),n=s[e],l("activate",a(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(o[e]||(o[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",a(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",a(n,e)),o={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function o(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const o=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",o?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const o={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",o)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const o=t+1;e.fragments[o]&&s(o,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const o=t-1;e.fragments[o]&&s(o,e.fragments[o].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){

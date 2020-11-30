@@ -195,6 +195,22 @@ Solve this with sorting!</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
 <h3>2)</h3>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.Arrays;
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isAnagram</span><span class="hljs-params">(String s, String t)</span> </span>{
+  <span class="hljs-keyword">if</span> (s.length() != t.length()) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+  }
+  <span class="hljs-keyword">var</span> arrS = s.toCharArray();
+  <span class="hljs-keyword">var</span> arrT = s.toCharArray();
+  Arrays.sort(arrS);
+  Arrays.sort(arrT);
+  
+  <span class="hljs-keyword">return</span> Arrays.equals(arrS, arrT);
+}
+
+System.out.println(isAnagram(<span class="hljs-string">&quot;harsh&quot;</span>, <span class="hljs-string">&quot;hrsah&quot;</span>));
+</span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
 <h3>3)</h3>
