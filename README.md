@@ -2,7 +2,7 @@
 
 Slides for CS 199 Even More Practice Using [Marp](https://marp.app/).
 
-The `html` files are generated from the `markdown` files, don't try to edit those directly.
+The `html` files are generated from the `markdown` files, so don't edit the html files but just edit the markdown files and github actions will automatically make the html files.
 
 You can find the [homepage](https://cs199emp.netlify.app/) here.
 
