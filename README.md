@@ -36,4 +36,4 @@ marp -I slides/ --output dist/
 ```
 ## Notes
 
-There are two copies of f20 links (before the folder structure) to ensure old links don't break.
+There are two copies of f20 html files in `dist/` (before the folder structure) to ensure old links don't break.
