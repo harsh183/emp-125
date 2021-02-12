@@ -43,7 +43,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="default" data-marpit-pagination="5" data-marpit-pagination-total="17" style="--paginate:true;--theme:default;">
 <h1>Practice with Multidimensional Arrays (10 minutes)</h1>
-<p>Write a function that takes in a two-dimensional <code>int</code> array (where the first dimension represents a summation and the second dimension represents the components of the summation) and a target value. If any of the sums is equal to the target value, return <code>true</code>, otherwise return <code>false</code>.</p>
+<p>Write a function that takes in a two-dimensional <code>int</code> array that represents multiple sequences of integers and a target value. You should  traverse the array to return whether the sum of those sequences is ever equal to the target value. If the sum of the sequence is equal to the target value, return <code>true</code>, otherwise return <code>false</code>.</p>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">calculateSums</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] sums, <span class="hljs-keyword">int</span> targetValue)</span> </span>{
     <span class="hljs-comment">// Your code here.</span>
 }
@@ -58,7 +58,7 @@
 
 <span class="hljs-keyword">int</span>[][] arr = {{<span class="hljs-number">34</span>, <span class="hljs-number">23</span>, <span class="hljs-number">53</span>}, {<span class="hljs-number">52</span>, <span class="hljs-number">42</span>, <span class="hljs-number">16</span>, -<span class="hljs-number">1</span>}};
 
-System.out.println(calculateSums(arr, <span class="hljs-number">109</span>)); <span class="hljs-comment">// Should print true.</span>
+System.out.println(calculateSums(arr, <span class="hljs-number">109</span>)); <span class="hljs-comment">// Should print false.</span>
 System.out.println(calculateSums(arr, <span class="hljs-number">110</span>)); <span class="hljs-comment">// Should print true.</span>
 System.out.println(calculateSums(arr, <span class="hljs-number">101</span>)); <span class="hljs-comment">// Should print false.</span>
 </span></span></foreignObject></svg></code></pre>
@@ -92,7 +92,7 @@ System.out.println(phoneLookUp(phoneNumbers, secondTarget)); <span class="hljs-c
 test += <span class="hljs-string">&quot; Chan&quot;</span>;
 <span class="hljs-comment">// Java creates &quot;Jackie Chan&quot;, but the string &quot;Jackie&quot; is gone forever :(</span>
 </span></span></foreignObject></svg></code></pre>
-<p>Because strings are <em>objects</em>, they come with certain methods, e.g. <code>.toCharArray()</code>, <code>.charAt()</code>, and <code>split()</code>. Knowing these will make your life easier when working with strings.</p>
+<p>Because strings are <em>objects</em>, they come with certain methods, e.g. <code>.toCharArray()</code>, <code>.charAt()</code>, and <code>.split()</code>. Knowing these will make your life easier when working with strings.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="default" data-marpit-pagination="10" data-marpit-pagination-total="17" style="--paginate:true;--theme:default;">
 <h1>Practice with Strings and Algorithms (10 minutes)</h1>
@@ -139,7 +139,7 @@ System.out.println(secretCode(codeWords));
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sums.length; i++) { <span class="hljs-comment">// loop through summations</span>
 
         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; sums[i].length; j++) { <span class="hljs-comment">// loop through components</span>
-            total += sum[i][j];
+            total += sums[i][j];
         }
 
         <span class="hljs-comment">// Check if the calculated total is equal to the target.</span>
