@@ -135,6 +135,7 @@ Use <code>default</code> as an equivalent to an <code>else</code> in if statemen
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-theme="default" data-marpit-pagination="11" data-marpit-pagination-total="19" style="--paginate:true;--theme:default;">
 <h1>Bonus Multidimensional/String Problem (15 minutes)</h1>
 <p>Write a function that goes through <code>String[][] tweets</code> where the first dimension is particular user, and <code>String[i][] = new String[]{&quot;jackiec3&quot;, &quot;Hello Twitter!&quot;}</code>, i.e. the second dimension contains two strings, the username and tweet.</p>
+<p>Simplify the tweets so that there's no punctuation and they're lowercased.</p>
 <p>Loop through each of these and replace the tweet if it contains a <code>bannedWord</code>, then replace the tweet with <code>[removed]</code>.</p>
 <p>Return the tweets.</p>
 </section>
@@ -152,9 +153,9 @@ String[][] banTweets(String[][] tweets, String bannedWord) {
 }
 
 String[][] tweets = {
-    {<span class="hljs-string">&quot;jackie&quot;</span>, <span class="hljs-string">&quot;I&#x27;m having a wonderful day today!&quot;</span>},
-    {<span class="hljs-string">&quot;akhila&quot;</span>, <span class="hljs-string">&quot;Not a good day for programming for me!&quot;</span>},
-    {<span class="hljs-string">&quot;geoff&quot;</span>, <span class="hljs-string">&quot;My students are awesome!&quot;</span>}
+    {<span class="hljs-string">&quot;jackie&quot;</span>, <span class="hljs-string">&quot;i&#x27;m having a wonderful day today&quot;</span>},
+    {<span class="hljs-string">&quot;akhila&quot;</span>, <span class="hljs-string">&quot;not a good day for programming for me&quot;</span>},
+    {<span class="hljs-string">&quot;geoff&quot;</span>, <span class="hljs-string">&quot;my students are awesome&quot;</span>}
 };
 
 filteredTweets = banTweets(tweets, <span class="hljs-string">&quot;day&quot;</span>);
