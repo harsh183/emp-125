@@ -54,7 +54,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="default" data-marpit-pagination="5" data-marpit-pagination-total="18" style="--paginate:true;--theme:default;">
 <h1>Static Methods and Static Fields</h1>
-<h3>Static Metods</h3>
+<h3>Static Methods</h3>
 <ul>
 <li>Use the <code>static</code> keyword to attach the method to the class, rather than the instance</li>
 <li><code>static</code> class methods cannot access instance variables</li>
@@ -157,7 +157,7 @@ b.show();
 <p>Create a class called <code>Animal</code>. <code>Animal</code> has one method called <code>sleep()</code> that returns <code>&quot;I am sleeping.&quot;</code></p>
 </li>
 <li>
-<p>Create a called <code>Fish</code>. <code>Fish</code> is a child class of <code>Animal</code>. <code>Fish</code> has one method called swim. <code>Fish</code> should print <code>&quot;I am swimming.&quot;</code> inside of <code>swim()</code>. Use extends correctly so that a <code>Fish</code> object can sleep and swim.</p>
+<p>Create a class called <code>Fish</code>. <code>Fish</code> is a child class of <code>Animal</code>. <code>Fish</code> has one method called swim. <code>Fish</code> should print <code>&quot;I am swimming.&quot;</code> inside of <code>swim()</code>. Use extends correctly so that a <code>Fish</code> object can sleep and swim.</p>
 </li>
 </ol>
 </section>
@@ -201,7 +201,7 @@ See y'all on Friday!</p>
   }
   
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Country</span><span class="hljs-params">(String setNationalBird, String setName)</span> </span>{
-    <span class="hljs-keyword">this</span>(setName, setNationalBird, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">this</span>(setName, setNationalBird, <span class="hljs-number">100</span>);
   }
 }
 </span></span></foreignObject></svg></code></pre>
@@ -209,8 +209,8 @@ See y'all on Friday!</p>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-theme="default" data-marpit-pagination="16" data-marpit-pagination-total="18" style="--paginate:true;--theme:default;">
 <h1>Practice with Static Methods and Static Fields - Solution</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
-  String name; 
-  <span class="hljs-keyword">int</span> age; 
+  <span class="hljs-keyword">private</span> String name; 
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age; 
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String setName, <span class="hljs-keyword">int</span> setAge)</span> </span>{
     <span class="hljs-keyword">this</span>.name = setName; 
     <span class="hljs-keyword">this</span>.age = setAge; 
