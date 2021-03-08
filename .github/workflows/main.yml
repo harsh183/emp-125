@@ -24,7 +24,7 @@ jobs:
       
       - name: marp-action
         env: 
-          MARP_ARGS: "-I slides/ --output dist/"
+          MARP_ARGS: "-I slides/ --output dist/" # this is the important line change since our marp command is different from the standard one
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           PUBLISH_TO_BRANCH: master
