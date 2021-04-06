@@ -43,7 +43,7 @@
 <p>Insert (anywhere)</p>
 <ul>
 <li data-marpit-fragment="5">ArrayList: O(n)</li>
-<li data-marpit-fragment="6">Linked List: (n)</li>
+<li data-marpit-fragment="6">Linked List: O(n)</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="default" data-marpit-pagination="7" data-marpit-pagination-total="21" style="--paginate:true;--theme:default;">
@@ -191,19 +191,17 @@ wordCount([&quot;c&quot;, &quot;c&quot;, &quot;c&quot;, &quot;c&quot;]) → {&qu
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="default" data-marpit-pagination="19" data-marpit-pagination-total="21" style="--paginate:true;--theme:default;">
 <h1>Linked List 2 Solution</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findIndex</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>{
-  <span class="hljs-keyword">int</span> index = -<span class="hljs-number">1</span>; 
+  <span class="hljs-keyword">int</span> index = -<span class="hljs-number">1</span>;
   Item i = <span class="hljs-keyword">this</span>.start;
+  
   <span class="hljs-keyword">while</span> (i != <span class="hljs-keyword">null</span>) {
-    index++; 
+    index++;
     <span class="hljs-keyword">if</span> (i.value == num) {
-      <span class="hljs-keyword">break</span>; 
-    } 
-    i = i.next;
-    <span class="hljs-keyword">if</span> (i == <span class="hljs-keyword">null</span>) {
-      <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+      <span class="hljs-keyword">return</span> index;
     }
+    i = i.next;
   }
-  <span class="hljs-keyword">return</span> index;
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>; 
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
