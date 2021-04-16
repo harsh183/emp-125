@@ -206,11 +206,14 @@ System.out.println(sum(arr)); <span class="hljs-comment">// Should be six.</span
 }
 
 <span class="hljs-comment">// Recursive function.</span>
-<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">containsHelper</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value, Item start)</span> </span>{
-  <span class="hljs-keyword">if</span> (start.value == value) { <span class="hljs-comment">// Check here.</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">containsHelper</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num, Item node)</span> </span>{
+  <span class="hljs-keyword">if</span> (node == <span class="hljs-keyword">null</span>) { <span class="hljs-comment">// We reached the end of the linked list.</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+  }
+  <span class="hljs-keyword">if</span> (node.value == num) { <span class="hljs-comment">// Check here.</span>
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
-  } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// Check the rest of the list.</span>
-    <span class="hljs-keyword">return</span> containsHelper(value, start.next);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> containsHelper(num, node.next);
   }
 }
 </span></span></foreignObject></svg></code></pre>
@@ -220,7 +223,7 @@ System.out.println(sum(arr)); <span class="hljs-comment">// Should be six.</span
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.ArrayList;
 <span class="hljs-keyword">import</span> java.util.List;
 
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(ArrayList&lt;Integer&gt; arr)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(List&lt;Integer&gt; arr)</span> </span>{
   <span class="hljs-keyword">if</span> (arr.size() == <span class="hljs-number">1</span>) {
     <span class="hljs-keyword">return</span> arr.get(<span class="hljs-number">0</span>);
   } <span class="hljs-keyword">else</span> {
